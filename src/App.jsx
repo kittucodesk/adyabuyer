@@ -1,17 +1,23 @@
 import { useState } from 'react'
-import './App.css'
+
 import ProductScreen from './ProductScreen'
+import CompareScreen from './CompareScreen';
 
-function App() {
-  const [count, setCount] = useState(0)
 
+
+
+const App = () => {
   return (
     <>
-      
-      <ProductScreen />
-    
-    </>
-  )
-}
+          <div className="bg-gray-50 min-h-screen p-4">
+          <CompareScreen/>
+          </div>
+         
+          </>
+         
+  
+  );
+};
+
 
 export default App

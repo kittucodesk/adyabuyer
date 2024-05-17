@@ -1,102 +1,160 @@
 import { useState } from 'react'
+import React from 'react'
 
 
-const products = [
-  {
-    id: 1,
-    name: 'Zip Tote Basket',
-    color: 'White and black',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg',
-    imageAlt: 'Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.',
-    price: '$140',
-  },
-  {
-    id: 1,
-    name: 'Zip Tote Basket',
-    color: 'White and black',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg',
-    imageAlt: 'Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.',
-    price: '$140',
-  },
-  {
-    id: 1,
-    name: 'Zip Tote Basket',
-    color: 'White and black',
-    href: '#',
-    imageSrc: '\assets\images\monitor.jpeg',
-    imageAlt: 'Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.',
-    price: '$140',
-  },
-  {
-    id: 1,
-    name: 'Zip Tote Basket',
-    color: 'White and black',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg',
-    imageAlt: 'Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.',
-    price: '$140',
-  },
-  {
-    id: 1,
-    name: 'Zip Tote Basket',
-    color: 'White and black',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg',
-    imageAlt: 'Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.',
-    price: '$140',
-  },
-]
+const ProductScreen = () => {
+  const card = [
+    {
+      src: 'src/assets/images/monitor.jpeg',
+      desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
+      provider: 'Mango Computers Delhi',
+      price: '₹28500/-',
+      age: { key: 23 }
 
-function ProductScreen() {
+    },
+    {
+      src: 'src/assets/images/monitor.jpeg',
+      desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
+      provider: 'New Delhi',
+      price: '₹28500/-',
 
+    },
+    {
+      src: 'src/assets/images/monitor.jpeg',
+      desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
+      provider: 'New Delhi',
+      price: '₹28500/-',
+
+    },
+    {
+      src: 'src/assets/images/monitor.jpeg',
+      desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
+      provider: 'New Delhi',
+      price: '₹28500/-',
+
+    },
+    {
+      src: 'src/assets/images/monitor.jpeg',
+      desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
+      provider: 'New Delhi',
+      price: '₹28500/-',
+
+    },
+    {
+      src: 'src/assets/images/monitor.jpeg',
+      desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
+      provider: 'New Delhi',
+      price: '₹28500/-',
+
+    },
+    {
+      src: 'src/assets/images/monitor.jpeg',
+      desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
+      provider: 'New Delhi',
+      price: '₹28500/-',
+
+    },
+    {
+      src: 'src/assets/images/monitor.jpeg',
+      desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
+      provider: 'New Delhi',
+      price: '₹28500/-',
+
+    },
+
+  ]
   return (
     <>
-      <div className="bg-white">
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <h2 style={{color: "#000000", font: "inter", fontWeight:"500",fontSize: 23 }}>Search Results </h2>
-
-          <div style={{display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)', // Three columns with equal width
-    gridGap: '20px',}} >
-         
-            {products.map((product) => (
-              <div key={product.id}>
-                <div className="relative">
-                  <div className="relative h-72 w-full overflow-hidden rounded-lg">
-                    <img
-                      src={product.imageSrc}
-                      alt={product.imageAlt}
-                      style={{ height: 300, width: 200 }}
-                    />
-                  </div>
-                  <div className="relative mt-4">
-                    <h3 className="text-sm font-medium text-gray-900">{product.name}</h3>
-                    <p className="mt-1 text-sm text-gray-500">{product.color}</p>
-                  </div>
-                  <div className="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
-                    <div
-                      aria-hidden="true"
-                      className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
-                    />
-                    <p className="relative text-lg font-semibold text-white">{product.price}</p>
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <a
-                    href={product.href}
-                    className="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-8 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200"
-                  >
-                    Add to bag<span className="sr-only">, {product.name}</span>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+    <div style={{margin: 100}}>
+      <div className='mb-8 ' style={{ width: "100%" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <p style={{ display: "flex", width: "100%", fontFamily: "inter", fontSize: "23", fontWeight: "600", height: 28, color: "#000", justifyItems: "center" }}> Search Results</p>
+          <button style={{ display: "flex", backgroundColor: "#F5F5F5", borderRadius: 12, padding: 12, justifyContent: "space-between", alignItems: "center", }}
+            className='border rounded-lg w-[30%] sm:w-[40%] md:w-[30%] lg:w-[10%] mx-auto '>
+            <img src='src/assets/images/icon1.png'></img>
+            <p>Compare</p>
+          </button>
         </div>
       </div>
+      <div style={{ gridTemplateColumns: "repeat(auto-fill, minmax(min(240px, 100%), 1fr))" }}
+        className='w-full mt-2 grid  gap-10 '>
+        {/* grid-cols-2 md:grid-cols-3 lg:grid-cols-4 */}
+        {card.map((items, index) => (
+          <div style={{ borderRadius: 19, border: "1px solid #DADFE5" }}>
+            <div className="flex justify-center items-center" >
+              <img src={items.src} alt="lap" style={{ height: 150 }}></img>
+            </div>
+            <button style={{ marginBottom: 10 }} className='border rounded-lg w-[100%] sm:w-[100%] md:w-[100%] lg:w-[40%] mx-auto bg-[#62B3FF40] text-[#003399]' >
+              <p>compare</p>
+            </button>
+            <hr />
+            <div className='px-2 font-medium mt-2'>
+              <p style={{ fontWeight: "500" }} className='text-[16.22px] text-[#2E2E2E]'>{items.desc}</p>
+              <p style={{ fontWeight: "500" }} className='leading-15 text-[12.74px] text-[#2E2E2E]'>{items.provider}</p>
+            </div>
 
+            <div className='flex justify-between p-2'>
+              <p style={{ fontWeight: "600" }} className='font-medium text-[16.22px]'>{items?.age?.key}</p>
+              <button style={{ fontWeight: "600" }} className='border border-[#001661] bg-[#E1E8FF] text-[#001661] rounded-lg px-3'>ADD</button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <button className='border border-[#D1D5DB] rounded-lg w-[100%] sm:w-[100%] md:w-[100%] lg:w-[15%] mx-auto bg-[#ffffff] text-[#374151] mt-10 flex justify-center'>
+        <p className='text-[20.37px]'> Show More</p>
+
+      </button>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 10 }}>
+        <p style={{ display: "flex", width: "100%", fontFamily: "inter", fontSize: "23", fontWeight: "600", height: 28, color: "#000", justifyItems: "center" }}>You Might Also Like</p>
+      </div>
+      {/* <div className='w-full mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 '>
+        {card.map((items, index) => (
+          <div style={{ width: 240, height: 345, borderRadius: 19, border: "1px solid #DADFE5" }}>
+            <div className="flex justify-center items-center" >
+              <img src={items.src} alt="lap" style={{ height: 150 }}></img>
+            </div>
+            <div style={{ marginBottom: 10 }} className='border rounded-lg w-[100%] sm:w-[100%] md:w-[100%] lg:w-[40%] mx-auto bg-[#62B3FF40] text-[#003399]' >
+              <p>compare</p>
+            </div>
+            <hr />
+            <div className='px-2 font-medium mt-2'>
+              <p style={{ fontWeight: "500" }} className='text-[16.22px] text-[#2E2E2E]'>{items.desc}</p>
+              <p style={{ fontWeight: "500" }} className='leading-15 text-[12.74px] text-[#2E2E2E]'>{items.provider}</p>
+            </div>
+
+            <div className='flex justify-between p-2'>
+              <p style={{ fontWeight: "600" }} className='font-medium text-[16.22px]'>{items.price}</p>
+              <p style={{ fontWeight: "600" }} className='border border-[#001661] bg-[#E1E8FF] text-[#001661] rounded-lg px-3'>ADD</p>
+            </div>
+          </div>
+        ))}
+      </div> */}
+      <div style={{ gridTemplateColumns: "repeat(auto-fill, minmax(min(240px, 100%), 1fr))" }}
+        className='w-full mt-2 grid  gap-10 '>
+        {/* grid-cols-2 md:grid-cols-3 lg:grid-cols-4 */}
+        {card.map((items, index) => (
+          <div style={{ borderRadius: 19, border: "1px solid #DADFE5" }}>
+            <div className="flex justify-center items-center" >
+              <img src={items.src} alt="lap" style={{ height: 150 }}></img>
+            </div>
+            <button style={{ marginBottom: 10 }} className='border rounded-lg w-[100%] sm:w-[100%] md:w-[100%] lg:w-[40%] mx-auto bg-[#62B3FF40] text-[#003399]' >
+              <p>compare</p>
+            </button>
+            <hr />
+            <div className='px-2 font-medium mt-2'>
+              <p style={{ fontWeight: "500" }} className='text-[16.22px] text-[#2E2E2E]'>{items.desc}</p>
+              <p style={{ fontWeight: "500" }} className='leading-15 text-[12.74px] text-[#2E2E2E]'>{items.provider}</p>
+            </div>
+
+            <div className='flex justify-between p-2 ml-5'>
+              <p style={{ fontWeight: "600" }} className='font-medium text-[16.22px]'>{items?.age?.key}</p>
+              <button style={{ fontWeight: "600" }} className='border border-[#001661] bg-[#E1E8FF] text-[#001661] rounded-lg px-3'>ADD</button>
+            </div>
+          </div>
+        ))}
+      </div>
+      </div>
     </>
   )
 
