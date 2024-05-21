@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 const ProductScreen = () => {
@@ -69,11 +70,13 @@ const ProductScreen = () => {
       <div className='mb-8 ' style={{ width: "100%" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <p style={{ display: "flex", width: "100%", fontFamily: "inter", fontSize: "23", fontWeight: "600", height: 28, color: "#000", justifyItems: "center" }}> Search Results</p>
-          <button style={{ display: "flex", backgroundColor: "#F5F5F5", borderRadius: 12, padding: 12, justifyContent: "space-between", alignItems: "center", }}
+          {/* <Link to="/CompareScreen"> */}
+         <button  style={{ display: "flex", backgroundColor: "#F5F5F5", borderRadius: 12, padding: 12, justifyContent: "space-between", alignItems: "center", }}
             className='border rounded-lg w-[30%] sm:w-[40%] md:w-[30%] lg:w-[10%] mx-auto '>
             <img src='src/assets/images/icon1.png'></img>
-            <p>Compare</p>
+            <a href={'/CompareScreen'}>Compare</a>
           </button>
+          {/* </Link> */}
         </div>
       </div>
       <div style={{ gridTemplateColumns: "repeat(auto-fill, minmax(min(240px, 100%), 1fr))" }}

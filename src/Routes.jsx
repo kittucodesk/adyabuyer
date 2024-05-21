@@ -1,15 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductScreen from './ProductScreen';
 import CompareScreen from './CompareScreen';
 
-const routes = () => (
+const AppRoutes = () => (
     <Router>
-        <Switch>
-            <Route exact path="/" component={ProductScreen} />
-            <Route path="/comp" component={CompareScreen} />
-        </Switch>
+        <Routes>
+            <Route exact path="/" element={<ProductScreen />} />
+            <Route path="/CompareScreen" element={<CompareScreen />} />
+        </Routes>
     </Router>
 );
 
-export default routes;
+export default AppRoutes;
