@@ -1,7 +1,7 @@
 import React from "react";
-import ProductCard from './Productcard';
+import ProductCard from './ProductCard';
 import FeatureGrid from "./FeaturesGrid";
-import TextGrid from "./textgrid";
+import TextGrid from "./TextGrid";
 import ComparisonGrid from "./ComparisonCard";
 
 const products = [
