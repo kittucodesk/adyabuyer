@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ProductScreen = () => {
   const card = [
     {
-      src: 'src/assets/images/monitor.jpeg',
+      src: 'public/monitor.jpeg',
       desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
       provider: 'Mango Computers Delhi',
       price: '₹28500/-',
@@ -14,49 +14,49 @@ const ProductScreen = () => {
 
     },
     {
-      src: 'src/assets/images/monitor.jpeg',
+      src: 'public/monitor.jpeg',
       desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
       provider: 'New Delhi',
       price: '₹28500/-',
 
     },
     {
-      src: 'src/assets/images/monitor.jpeg',
+      src: 'public/monitor.jpeg',
       desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
       provider: 'New Delhi',
       price: '₹28500/-',
 
     },
     {
-      src: 'src/assets/images/monitor.jpeg',
+      src: 'public/monitor.jpeg',
       desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
       provider: 'New Delhi',
       price: '₹28500/-',
 
     },
     {
-      src: 'src/assets/images/monitor.jpeg',
+      src:'public/monitor.jpeg',
       desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
       provider: 'New Delhi',
       price: '₹28500/-',
 
     },
     {
-      src: 'src/assets/images/monitor.jpeg',
+      src: 'public/monitor.jpeg',
       desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
       provider: 'New Delhi',
       price: '₹28500/-',
 
     },
     {
-      src: 'src/assets/images/monitor.jpeg',
+      src: 'public/monitor.jpeg',
       desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
       provider: 'New Delhi',
       price: '₹28500/-',
 
     },
     {
-      src: 'src/assets/images/monitor.jpeg',
+      src: 'public/monitor.jpeg',
       desc: 'Asus ROG Gaming Laptop 256 SSD, 8gb, FHD',
       provider: 'New Delhi',
       price: '₹28500/-',
