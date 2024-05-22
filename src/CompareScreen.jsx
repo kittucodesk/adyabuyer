@@ -45,54 +45,71 @@ const CompareScreen = () => {
 
     return (
         <>
-            <div id="CompareScreen" style={{ display: "flex", flexDirection: "row" }}>
-                <div style={{ width: 268 }}>
-                    <div style={{ height: "100%", position: "relative", display: "flex", justifyContent: 'center' }}>
-                        <h1 style={{ position: "relative", top: 0, fontWeight: "400", }} className=" font-italic text-32 text-[#362D86] mb-4">Compare
-                            <br /> <span style={{ fontWeight: "800" }} className="text-32 text-[#362D86] mb-4" >Products</span>
-                        </h1>
-                        <div className=" flex items-center ">
-                            <label style={{ borderRadius: 4, display: "flex", justifyContent: "center", alignContent: "center", padding: 9 }} className=" text-[#fff] bg-[#362D86] ">Full</label>
-                            <label style={{ borderRadius: 74, display: "flex", justifyContent: "center", alignContent: "center", padding: 9 }} className="text-[#000] bg-[#FFFFFF] ">OR</label>
-                            <label style={{ borderRadius: 4, display: "flex", justifyContent: "center", alignContent: "center", padding: 9 }} className=" text-[##362D86] bg-[#A4BCE0] ">Difference</label>
-                        </div>
-                        <div className=" absolute flex items-center bottom-0 ">
-                            <p style={{ fontWeight: "700" }} className="text-20 text-[#362D86] mb-4">Pricing</p>
-                        </div>
-                    </div>
-                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: 30 }}>
-                        <div style={{ fontWeight: "600" }} className="text-20 text-[#362D86] mb-4">Features
-                            <p style={{ fontWeight: "400" }} className="text-16 mt-8 text-[#6B7280] mb-4">Feature 1</p>
-                            <p style={{ fontWeight: "400" }} className="text-16 text-[#6B7280] mb-4">Feature 2</p>
-                            <p style={{ fontWeight: "400" }} className="text-16 text-[#6B7280] mb-4">Feature 3</p>
-                            <p style={{ fontWeight: "400" }} className="text-16 text-[#6B7280] mb-4">Feature 4</p>
-                            <p style={{ fontWeight: "400" }} className="text-16 text-[#6B7280] mb-4">Feature 5</p>
+            <div id="CompareScreen" >
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                    <div style={{ width: 268 }}>
+                        <div className="h-full flex flex-col justify-between items-center gap-y-20">
+                            <div className="h-full flex flex-col justify-between">
+                                <h1 className="text-4xl font-light italic text-[#362D86]  text-center">
+                                    Compare
+                                    <br />
+                                    <span className="font-bold">Products</span>
+                                </h1>
+                                <div className="flex items-center ">
+                                    <label className="bg-[#362D86] text-white rounded-l px-4 py-2 flex justify-center items-center">Full</label>
+                                    <label className="bg-white text-black px-4 py-2 flex justify-center items-center">OR</label>
+                                    <label className="bg-[#A4BCE0] text-[#362D86] rounded-r px-4 py-2 flex justify-center items-center">Difference</label>
+                                </div>
+                            </div>
+
+                            <div className=" w-full text-center">
+                                <p className="text-xl font-bold text-[#362D86]">Pricing</p>
+                            </div>
                         </div>
                     </div>
-                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: 30 }}>
-                        <div style={{ fontWeight: "600" }} className="text-20 text-[#362D86] mb-4">Description
-                            <p style={{ fontWeight: "400" }} className="text-16 mt-8  text-[#6B7280] mb-4">Relative Features</p>
-                        </div>
+                    <div className=" flex gap-x-0 gap-y-10 grid grid-cols-custom-layout">
+                        {products.map((product) => (
+                            <ProductCard key={product.id} product={product} />
+                        ))}
                     </div>
                 </div>
-                <div >
-                    <div className=" flex grid grid-cols-custom-layout">                 
-                     {products.map((product) => (
-                            <ProductCard key={product.id} product={product} />
-                    ))}
+                <h2 style={{  width: 240 ,fontWeight: "600" }} className=" flex justify-center text-20 text-[#362D86] mt-10">Features</h2>
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                    <div style={{ width: 248 }}>
+                        <div style={{ display: "flex", justifyContent: "center", alignItems: "center",}}>
+                            <div >
+                                <p style={{ fontWeight: "400" }} className="text-16 mt-8 text-[#6B7280] mb-4 ">Feature 1</p>
+                                <p style={{ fontWeight: "400" }} className="text-16 text-[#6B7280] mb-4 ">Feature 2</p>
+                                <p style={{ fontWeight: "400" }} className="text-16 text-[#6B7280] mb-4 ">Feature 3</p>
+                                <p style={{ fontWeight: "400" }} className="text-16 text-[#6B7280] mb-4 ">Feature 4</p>
+                            </div>
+                        </div>
                     </div>
-
-
-                    <div style={{marginTop: 40}} >
+                    <div style={{ marginTop: 40, width: 990 }} >
                         <FeatureGrid />
                     </div>
-                    <div  style={{marginTop: 40}}> <TextGrid /></div>
+                </div>
 
+                <h2 style={{  width: 240 ,fontWeight: "600" }} className=" flex justify-center text-20 text-[#362D86] mt-10">Description</h2>
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                    <div style={{ width: 648 }}>
+                        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", }}>
+                            <div >
+                                <p style={{ fontWeight: "400" }} className="text-16 mt-8  text-[#6B7280] mb-4">Relative Features</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div >
+                        <div style={{ marginTop: 40,}}>
+                            <TextGrid />
+                        </div>
+                    </div>
+                </div >
+                <div>
+                    <ComparisonGrid />
                 </div>
-                <div >
-                </div>
+
             </div>
-            {/* <div><ComparisonGrid /></div> */}
         </>
     )
 }
